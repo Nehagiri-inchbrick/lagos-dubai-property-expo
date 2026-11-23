@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dubai Property Expo 2026 &mdash; Discover Your Next Address | Lagos Showcase</title>
+  <meta name="description"
+    content="Dubai Property Expo 2026 &mdash; Bringing Dubai's Premier Real Estate Market Directly to Lagos on 5th & 6th December. Hosted by Inch & Brick Realty. Reserve your private consultation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0c1017;
+      --navy: #0f1724;
+      --navy-deep: #080c14;
+      --card-bg: rgba(18, 25, 38, 0.88);
+      --gold: #dfc17b;
+      --gold-light: #f3e5be;
+      --gold-dark: #a9803e;
+      --ivory: #f8f6f0;
+      --sand: #ede7dc;
+      --line: rgba(223, 193, 123, 0.28);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--navy-deep);
+      color: #fff;
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    select {
+      font-family: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* --- Navigation --- */
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 42px;
+      transition: all 0.3s ease;
+    }
+
+    .nav.solid {
+      position: fixed;
+      background: rgba(10, 15, 23, 0.94);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      padding: 16px 42px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 38px;
+      width: auto;
+      filter: brightness(1.05);
+    }
+
+    .brand-host {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-left: 1px solid var(--line);
+      padding-left: 14px;
+      line-height: 1.2;
+    }
+
+    .brand-host span {
+      display: block;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.65rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .btn-pill {
+      border: 1px solid var(--gold);
+      color: #0c1017 !important;
+      background: linear-gradient(100deg, var(--gold-light), var(--gold) 60%, var(--gold-dark));
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 18px rgba(223, 193, 123, 0.28);
+      transition: all 0.3s ease !important;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .btn-pill:hover {
+      filter: brightness(1.12);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 22px rgba(223, 193, 123, 0.4);
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 120px 0 60px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: -2%;
+      background: #0f1622 url("assets/dubai-skyline.jpg") center 40% / cover no-repeat;
+      animation: heroZoom 24s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.06) translate3d(-1%, -0.8%, 0);
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(8, 12, 19, 0.94) 0%, rgba(8, 12, 19, 0.8) 45%, rgba(8, 12, 19, 0.55) 75%, rgba(8, 12, 19, 0.88) 100%),
+        linear-gradient(180deg, rgba(8, 12, 19, 0.7) 0%, transparent 25%, transparent 70%, rgba(8, 12, 19, 0.98) 100%);
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 5;
+      width: min(1220px, calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 440px);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge-event {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(223, 193, 123, 0.12);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 18px;
+      margin-bottom: 20px;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      backdrop-filter: blur(10px);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 10px #34d399;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.85);
+      }
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-family: var(--serif);
+      font-size: clamp(2.9rem, 4.8vw, 4.8rem);
+      line-height: 1.02;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 span.gold {
+      color: var(--gold-light);
+      font-style: italic;
+      font-weight: 600;
+      display: block;
+    }
+
+    .hero-sub {
+      margin: 0 0 24px;
+      font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300;
+      max-width: 52ch;
+      border-left: 2px solid var(--gold);
+      padding-left: 16px;
+    }
+
+    .mobile-sub,
+    .badge-text-mob {
+      display: none;
+    }
+
+    .hero-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .meta-tag {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(8px);
+    }
+
+    .meta-tag svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta-btn {
+      background: linear-gradient(100deg, var(--gold-light), var(--gold) 45%, var(--gold-dark));
+      color: #121820;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      padding: 16px 36px;
+      border-radius: 999px;
+      border: 0;
+      box-shadow: 0 10px 30px rgba(223, 193, 123, 0.38);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .hero-cta-btn:hover {
+      filter: brightness(1.12);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(223, 193, 123, 0.48);
+    }
+
+    .hero-guarantee {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* --- Form Card --- */
+    .form-card {
+      background: linear-gradient(180deg, rgba(23, 32, 48, 0.94), rgba(13, 18, 28, 0.95));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 34px 28px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(20px);
+      position: relative;
+    }
+
+    .form-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 30px;
+      right: 30px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-kicker {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .form-kicker::before,
+    .form-kicker::after {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .form-card h2 {
+      margin: 0 0 6px;
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .form-subtext {
+      margin: 0;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 300;
+    }
+
+    .form-price-strip {
+      background: rgba(223, 193, 123, 0.08);
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 8px 14px;
+      margin: 14px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .fps-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .fps-val {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .form-fields {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 9px;
+      color: #fff;
+      font-size: 0.92rem;
+      transition: border 0.2s, background 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-group select option {
+      background: #0f1622;
+      color: #fff;
+    }
+
+    .phone-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 8px;
+    }
+
+    .err-msg {
+      color: #f87171;
+      font-size: 0.74rem;
+      margin: 3px 0 0;
+      min-height: 16px;
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 14px 20px;
+      background: linear-gradient(100deg, var(--gold-light), var(--gold) 45%, var(--gold-dark));
+      border: 0;
+      border-radius: 999px;
+      color: #0c1017;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(223, 193, 123, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      filter: brightness(1.12);
+      transform: translateY(-1px);
+    }
+
+    .form-footer-note {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* --- Thanks View --- */
+    .thanks-card {
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    .thanks-card h3 {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      color: var(--gold-light);
+      margin: 0 0 10px;
+    }
+
+    .thanks-card p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .thanks-card[hidden] {
+      display: none;
+    }
+
+    /* --- Section 2: Event Information Banner --- */
+    .event-banner-wrap {
+      position: relative;
+      z-index: 10;
+      margin-top: -36px;
+      padding: 0 24px;
+    }
+
+    .event-banner {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid rgba(223, 193, 123, 0.5);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      padding: 28px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: center;
+      position: relative;
+    }
+
+    .eb-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-right: 1px solid rgba(0, 0, 0, 0.08);
+      padding-right: 18px;
+    }
+
+    .eb-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .eb-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #fbf5ea;
+      border: 1px solid rgba(223, 193, 123, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9a7340;
+      flex-shrink: 0;
+    }
+
+    .eb-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .eb-content .eb-kicker {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9a7340;
+      font-weight: 600;
+      margin: 0 0 3px;
+    }
+
+    .eb-content .eb-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #121820;
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    .eb-content .eb-desc {
+      font-size: 0.8rem;
+      color: #556272;
+      margin: 2px 0 0;
+    }
+
+    /* --- Section 3: Value Proposition ("What You Can Explore") - ATTRACTIVE & PROFESSIONAL --- */
+    .value-prop-section {
+      padding: 95px 0 85px;
+      position: relative;
+      background: #fbf9f5;
+      color: #121820;
+    }
+
+    .vp-container {
+      width: min(1200px, calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    .sec-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 46px;
+    }
+
+    .sec-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #9a7340;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .sec-kicker::before,
+    .sec-kicker::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: #9a7340;
+    }
+
+    .sec-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      margin: 0 0 10px;
+      font-weight: 500;
+      line-height: 1.05;
+      color: #0e141e;
+    }
+
+    .sec-head p {
+      color: #556272;
+      font-size: 1.02rem;
+      margin: 0 auto;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    /* 5-Item Balanced Architectural Grid: 3 on Top Row, 2 Centered on Bottom Row */
+    .vp-grid-pro {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 22px;
+    }
+
+    .vp-card-pro {
+      background: #ffffff;
+      border: 1px solid rgba(210, 185, 138, 0.4);
+      border-radius: 16px;
+      padding: 32px 28px 28px;
+      box-shadow: 0 10px 30px rgba(26, 20, 10, 0.04);
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vp-card-pro:hover {
+      transform: translateY(-4px);
+      border-color: #9a7340;
+      box-shadow: 0 18px 45px rgba(26, 20, 10, 0.09);
+    }
+
+    .vp-card-pro:nth-child(1),
+    .vp-card-pro:nth-child(2),
+    .vp-card-pro:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    .vp-card-pro:nth-child(4),
+    .vp-card-pro:nth-child(5) {
+      grid-column: span 3;
+    }
+
+    .vp-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .vp-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #fbf5ea;
+      border: 1px solid rgba(223, 193, 123, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9a7340;
+    }
+
+    .vp-card-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .vp-card-num {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: rgba(154, 115, 64, 0.45);
+      font-weight: 600;
+    }
+
+    .vp-card-pro h3 {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: #0e141e;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    .vp-card-pro p {
+      color: #556272;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* --- Featured Properties Showcase - LIGHT IVORY/SAND THEME --- */
+    .showcase-section {
+      padding: 80px 0 90px;
+      background: #f4efe6;
+      color: #121820;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      margin-top: 40px;
+    }
+
+    .showcase-item {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(210, 185, 138, 0.35);
+      box-shadow: 0 12px 35px rgba(25, 20, 10, 0.06);
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .showcase-item:hover {
+      transform: translateY(-4px);
+      border-color: #9a7340;
+      box-shadow: 0 20px 50px rgba(25, 20, 10, 0.12);
+    }
+
+    .showcase-img {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .showcase-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .showcase-item:hover .showcase-img img {
+      transform: scale(1.08);
+    }
+
+    .showcase-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(18, 24, 32, 0.85);
+      color: var(--gold-light);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+
+    .showcase-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .showcase-body h3 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      margin: 0 0 6px;
+      font-weight: 600;
+      color: #0e141e;
+    }
+
+    .showcase-loc {
+      color: #64748b;
+      font-size: 0.84rem;
+      margin: 0 0 16px;
+    }
+
+    .showcase-metrics {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 12px 0;
+      margin-bottom: 18px;
+    }
+
+    .metric-val {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      color: #9a7340;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .metric-lbl {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .showcase-btn {
+      margin-top: auto;
+      background: #fbf8f2;
+      border: 1px solid #9a7340;
+      color: #9a7340;
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .showcase-btn:hover {
+      background: #9a7340;
+      color: #ffffff;
+    }
+
+    .showcase-swipe-hint {
+      display: none;
+    }
+
+    /* --- Golden Visa & Payment Plans Banner --- */
+    .visa-banner {
+      width: 100%;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #141d2c, #0d131e);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      padding: 48px 42px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visa-banner::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      bottom: -100px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(223, 193, 123, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .vb-content h3 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin: 0 0 14px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .vb-content p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.98rem;
+      margin: 0 0 24px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .vb-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .vbf-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .vbf-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .vb-action-box {
+      background: rgba(223, 193, 123, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .vb-action-box h4 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--gold-light);
+      margin: 0 0 8px;
+    }
+
+    .vb-action-box p {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0 0 20px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #070a0f;
+      border-top: 1px solid rgba(223, 193, 123, 0.2);
+      padding: 60px 24px 36px;
+    }
+
+    .foot-container {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .foot-brand p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+      margin: 14px 0 0;
+      max-width: 38ch;
+    }
+
+    .foot-col h4 {
+      font-size: 0.76rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 16px;
+    }
+
+    .foot-col p,
+    .foot-col li {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.85rem;
+      margin: 0 0 8px;
+      list-style: none;
+    }
+
+    .foot-col ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .foot-bottom {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    /* --- Responsive Breakpoints --- */
+    @media (max-width: 1024px) {
+      .event-banner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .eb-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .vp-grid-pro {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .vp-card-pro:nth-child(1),
+      .vp-card-pro:nth-child(2),
+      .vp-card-pro:nth-child(3),
+      .vp-card-pro:nth-child(4) {
+        grid-column: span 1;
+      }
+
+      .vp-card-pro:nth-child(5) {
+        grid-column: span 2;
+      }
+
+      .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .visa-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .foot-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        padding: 10px 18px;
+      }
+
+      .nav .brand img {
+        height: 26px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 64px 0 16px;
+        min-height: auto;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        width: min(480px, calc(100% - 24px));
+        gap: 8px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      /* Banner Content on Mobile */
+      .badge-event {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 12px;
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        margin-bottom: 6px;
+        backdrop-filter: blur(10px);
+      }
+
+      .hero h1 {
+        font-size: clamp(1.75rem, 6.8vw, 2.25rem);
+        line-height: 1.08;
+        margin: 0 0 6px;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero h1 span.gold {
+        display: block;
+        font-size: 0.9em;
+        font-style: italic;
+        margin-top: 2px;
+        background: linear-gradient(100deg, #fff2d1 0%, #dfc17b 55%, #c89b4b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 14px rgba(223, 193, 123, 0.35);
+      }
+
+      .hero-sub {
+        display: block;
+        font-size: 0.84rem;
+        line-height: 1.4;
+        margin: 0 auto 10px;
+        max-width: 44ch;
+        color: rgba(255, 255, 255, 0.88);
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      /* Excluded on mobile view as requested:
+         1. 5th & 6th December 2026
+         2. [Venue Name, Lagos]
+         3. 10-Year Golden Visa Eligible
+         4. RESERVE YOUR CONSULTATION
+         5. Direct Developer Allocations · 0% Commission
+      */
+      .hero-meta-strip,
+      .hero-cta-group {
+        display: none !important;
+      }
+
+      /* Highly attractive, luxurious mobile form card */
+      .form-card {
+        background: linear-gradient(170deg, rgba(22, 33, 50, 0.96) 0%, rgba(12, 18, 29, 0.98) 100%);
+        border: 1px solid rgba(223, 193, 123, 0.45);
+        border-radius: 16px;
+        padding: 14px 16px 12px;
+        box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 25px rgba(223, 193, 123, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        position: relative;
+      }
+
+      .form-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        height: 1.5px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      }
+
+      .form-header {
+        margin-bottom: 6px;
+      }
+
+      .form-kicker {
+        font-size: 0.64rem;
+        letter-spacing: 0.22em;
+        margin-bottom: 2px;
+        color: var(--gold);
+        font-weight: 600;
+      }
+
+      .form-kicker::before,
+      .form-kicker::after {
+        width: 16px;
+        background: var(--gold);
+      }
+
+      .form-card h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 2px;
+        line-height: 1.1;
+        color: #ffffff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .form-subtext {
+        display: none;
+      }
+
+      /* Attractive golden investment highlight strip */
+      .form-price-strip {
+        background: linear-gradient(90deg, rgba(223, 193, 123, 0.16) 0%, rgba(223, 193, 123, 0.05) 100%);
+        border: 1px solid rgba(223, 193, 123, 0.38);
+        box-shadow: inset 0 0 12px rgba(223, 193, 123, 0.08);
+        border-radius: 8px;
+        padding: 5px 12px;
+        margin: 4px 0 6px;
+      }
+
+      .fps-label {
+        font-size: 0.64rem;
+        letter-spacing: 0.14em;
+        color: #dfc17b;
+        font-weight: 600;
+      }
+
+      .fps-val {
+        font-size: 0.98rem;
+        font-weight: 700;
+        color: #fff2d1;
+        text-shadow: 0 0 10px rgba(223, 193, 123, 0.4);
+      }
+
+      .form-fields {
+        gap: 10px;
+      }
+
+      .form-group label {
+        font-size: 0.63rem;
+        margin-bottom: 2px;
+        letter-spacing: 0.12em;
+        color: rgba(243, 229, 190, 0.9);
+        font-weight: 600;
+      }
+
+      .form-group input,
+      .form-group select {
+        padding: 10px 11px;
+        font-size: 15px;
+        /* >= 15px prevents iOS auto-zoom on focus */
+        line-height: 1.2;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(223, 193, 123, 0.28);
+        color: #ffffff;
+        transition: border 0.2s, background 0.2s, box-shadow 0.2s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        border-color: #f3e5be;
+        background: rgba(223, 193, 123, 0.1);
+        box-shadow: 0 0 10px rgba(223, 193, 123, 0.3);
+      }
+
+      .phone-row {
+        grid-template-columns: 86px 1fr;
+        gap: 6px;
+      }
+
+      /* Premium gold action button */
+      .submit-btn {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        margin-top: 5px;
+        border-radius: 999px;
+        background: linear-gradient(100deg, #f7e8c3 0%, #dfc17b 45%, #b98b45 100%);
+        color: #0b0f16;
+        box-shadow: 0 6px 22px rgba(223, 193, 123, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      }
+
+      .form-footer-note {
+        font-size: 0.63rem;
+        color: rgba(255, 255, 255, 0.65);
+        margin-top: 4px;
+        gap: 5px;
+      }
+
+      .event-banner-wrap {
+        margin-top: 20px;
+        padding: 0 14px;
+      }
+
+      .event-banner {
+        grid-template-columns: 1fr;
+        padding: 22px 20px;
+        gap: 16px;
+      }
+
+      .eb-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(223, 193, 123, 0.16);
+        padding-bottom: 14px;
+        padding-right: 0;
+      }
+
+      .eb-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .vp-grid-pro {
+        grid-template-columns: 1fr;
+      }
+
+      .vp-card-pro:nth-child(1),
+      .vp-card-pro:nth-child(2),
+      .vp-card-pro:nth-child(3),
+      .vp-card-pro:nth-child(4),
+      .vp-card-pro:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      /* Horizontal Draggable Columns on Mobile */
+      .showcase-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 10px 16px 20px;
+        margin-left: -14px;
+        margin-right: -14px;
+        cursor: grab;
+        scrollbar-width: thin;
+        scrollbar-color: var(--gold) rgba(0, 0, 0, 0.06);
+      }
+
+      .showcase-grid.is-dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+        user-select: none;
+      }
+
+      .showcase-grid::-webkit-scrollbar {
+        height: 5px;
+      }
+
+      .showcase-grid::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 999px;
+      }
+
+      .showcase-grid::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 999px;
+      }
+
+      .showcase-item {
+        flex: 0 0 82vw;
+        max-width: 325px;
+        min-width: 260px;
+        scroll-snap-align: center;
+        user-select: none;
+        box-shadow: 0 10px 28px rgba(25, 20, 10, 0.08);
+      }
+
+      .showcase-img {
+        height: 195px;
+      }
+
+      .showcase-body {
+        padding: 18px 16px;
+      }
+
+      .showcase-body h3 {
+        font-size: 1.45rem;
+        margin-bottom: 4px;
+      }
+
+      .showcase-metrics {
+        padding: 10px 0;
+        margin-bottom: 14px;
+      }
+
+      .metric-val {
+        font-size: 1.25rem;
+      }
+
+      .showcase-swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #9a7340;
+        font-weight: 600;
+        margin-top: 14px;
+      }
+
+      .showcase-swipe-hint svg {
+        width: 15px;
+        height: 15px;
+        animation: swipeHintAnim 1.6s infinite ease-in-out;
+      }
+
+      @keyframes swipeHintAnim {
+
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+
+        50% {
+          transform: translateX(6px);
+        }
+      }
+
+      .vp-container {
+        width: calc(100% - 24px);
+      }
+
+      /* Reduce space left and right on mobile for 10-Year Golden Visa Banner */
+      .visa-banner {
+        padding: 26px 16px;
+        border-radius: 16px;
+        gap: 22px;
+        margin-top: 36px !important;
+      }
+
+      .vb-content h3 {
+        font-size: clamp(1.45rem, 5.2vw, 1.8rem);
+        line-height: 1.15;
+        margin: 0 0 10px;
+      }
+
+      .vb-content p {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin: 0 0 16px;
+      }
+
+      .vb-features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .vbf-item {
+        font-size: 0.82rem;
+        gap: 8px;
+      }
+
+      .vb-action-box {
+        padding: 20px 14px;
+        border-radius: 14px;
+      }
+
+      .vb-action-box h4 {
+        font-size: 1.45rem;
+        margin-bottom: 6px;
+      }
+
+      .vb-action-box p {
+        font-size: 0.82rem;
+        margin-bottom: 16px;
+      }
+
+      .foot-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .phone-row {
+        grid-template-columns: 90px 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" id="navbar">
+    <a class="brand" href="#top">
+      <img src="assets/inchbrick-logo.png" alt="Inch & Brick Realty">
+
+    </a>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="#event-details">Event Details</a>
+      <a href="#explore">What You Can Explore</a>
+      <a href="#developments">Developments</a>
+      <a href="#golden-visa">Golden Visa</a>
+      <a class="btn-pill" href="#consultation">Reserve Consultation</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- 1. Hero Section -->
+    <section class="hero" aria-label="Dubai Property Expo 2026">
+      <div class="hero-bg" role="img" aria-label="Dubai sunset skyline connecting West Africa to Dubai"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="badge-event">
+            <span class="badge-dot"></span>
+            Exclusive Lagos Showcase &middot; 5&ndash;6 Dec 2026
+          </div>
+          <h1>
+            Dubai Property Expo 2026
+            <span class="gold">&mdash; Discover Your Next Address</span>
+          </h1>
+          <p class="hero-sub">
+            Bringing Dubai's Premier Real Estate Market Directly to Lagos on 5th &amp; 6th December.
+          </p>
+
+          <div class="hero-meta-strip">
+            <div class="meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              5th &amp; 6th December 2026
+            </div>
+            <div class="meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              [Venue Name, Lagos]
+            </div>
+            <div class="meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              10-Year Golden Visa Eligible
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a class="hero-cta-btn" href="#consultation">
+              <span>RESERVE YOUR CONSULTATION</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <span class="hero-guarantee">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              Direct Developer Allocations · 0% Commission
+            </span>
+          </div>
+        </div>
+
+        <!-- Consultation Booking Card -->
+        <div class="form-card" id="consultation">
+          <form id="consultation-form" novalidate>
+            <div class="form-header">
+              <p class="form-kicker">Private Invitation</p>
+              <h2>Reserve Your Consultation</h2>
+              <p class="form-subtext">Meet directly with senior portfolio advisors in Lagos.</p>
+            </div>
+
+            <div class="form-price-strip">
+
+              <span class="fps-val">From AED 1.2M (~$330K)</span>
+            </div>
+
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="full-name">Full Name *</label>
+                <input id="full-name" name="name" type="text" placeholder="e.g. Chief Adebayo Adeleke" required>
+                <div class="err-msg" id="err-name">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="nationality">Nationality *</label>
+                <select id="nationality" name="nationality" required>
+                  <option value="Nigerian" selected>🇳🇬 Nigerian</option>
+                  <option value="Ghanaian">🇬🇭 Ghanaian</option>
+                  <option value="Emirati/UAE">🇦🇪 UAE Resident / National</option>
+                  <option value="British">🇬🇧 British</option>
+                  <option value="American">🇺🇸 American</option>
+                  <option value="Canadian">🇨🇦 Canadian</option>
+                  <option value="Indian">🇮🇳 Indian</option>
+                  <option value="South African">🇿🇦 South African</option>
+                  <option value="Other">🌍 Other Nationality</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="phone-num">WhatsApp / Mobile Number *</label>
+                <div class="phone-row">
+                  <select name="countryCode" id="countryCode">
+                    <option value="+234" selected>🇳🇬 +234</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+233">🇬🇭 +233</option>
+                  </select>
+                  <input id="phone-num" name="mobile" type="tel" inputmode="numeric" placeholder="801 234 5678"
+                    required>
+                </div>
+                <div class="err-msg" id="err-mobile">Please enter a valid phone number.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email-addr">Email Address *</label>
+                <input id="email-addr" name="email" type="email" placeholder="name@company.com" required>
+                <div class="err-msg" id="err-email">Please provide a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="slot-date">Preferred Consultation Slot</label>
+                <select id="slot-date" name="slot">
+                  <option value="dec5-morning">Saturday, 5th December — Morning (10 AM - 1 PM)</option>
+                  <option value="dec5-afternoon">Saturday, 5th December — Afternoon (2 PM - 5 PM)</option>
+                  <option value="dec6-morning">Sunday, 6th December — Morning (10 AM - 1 PM)</option>
+                  <option value="dec6-afternoon">Sunday, 6th December — Afternoon (2 PM - 6 PM)</option>
+                </select>
+              </div>
+
+              <button class="submit-btn" type="submit">CONFIRM MY INVITATION</button>
+            </div>
+
+            <div class="form-footer-note">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              Strictly confidential · No consultation fee · Priority access
+            </div>
+          </form>
+
+          <div class="thanks-card" id="thanks-view" hidden>
+            <div
+              style="width: 50px; height: 50px; border-radius: 50%; background: rgba(52, 211, 153, 0.15); border: 1px solid #34d399; color: #34d399; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3>Consultation Confirmed</h3>
+            <p id="thanks-msg">Thank you. An executive advisor from Inch &amp; Brick Realty will contact you via
+              WhatsApp shortly with your private event invitation and access pass.</p>
+            <div
+              style="background: rgba(255,255,255,0.06); padding: 12px 16px; border-radius: 10px; font-size: 0.8rem; color: var(--gold);">
+              Lagos Showcase · 5–6 December 2026
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Event Information Banner -->
+    <div class="event-banner-wrap" id="event-details">
+      <div class="event-banner">
+        <!-- Event Name -->
+        <div class="eb-item">
+          <div class="eb-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+          </div>
+          <div class="eb-content">
+            <div class="eb-kicker">Event Name</div>
+            <div class="eb-title">Dubai Property Showcase &mdash; Lagos</div>
+            <div class="eb-desc">Premier Private Exhibition</div>
+          </div>
+        </div>
+
+        <!-- Dates -->
+        <div class="eb-item">
+          <div class="eb-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="eb-content">
+            <div class="eb-kicker">Dates &amp; Schedule</div>
+            <div class="eb-title">5&ndash;6 December 2026</div>
+            <div class="eb-desc">10:00 AM – 7:00 PM Daily</div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="eb-item">
+          <div class="eb-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="eb-content">
+            <div class="eb-kicker">Location / Venue</div>
+            <div class="eb-title">[Venue Name, Lagos]</div>
+            <div class="eb-desc">Victoria Island, Lagos, Nigeria</div>
+          </div>
+        </div>
+
+        <!-- Host -->
+        <div class="eb-item">
+          <div class="eb-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="eb-content">
+            <div class="eb-kicker">Official Host</div>
+            <div class="eb-title">Inch &amp; Brick Realty</div>
+            <div class="eb-desc">Authorized Global Partners</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Value Proposition ("What You Can Explore") -->
+    <section class="value-prop-section" id="explore">
+      <div class="vp-container">
+        <div class="sec-head">
+          <div class="sec-kicker">Core Value Proposition</div>
+          <h2>What You Can Explore</h2>
+          <p>Key market privileges and opportunities curated exclusively for the Lagos Showcase:</p>
+        </div>
+
+        <div class="vp-grid-pro">
+          <!-- 1. Prime Residential Inventory -->
+          <div class="vp-card-pro">
+            <div class="vp-card-top">
+              <div class="vp-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 11h2M13 11h2M9 15h2M13 15h2M9 19h2M13 19h2"></path>
+                </svg>
+              </div>
+              <span class="vp-card-num">01</span>
+            </div>
+            <h3>Prime Residential Inventory</h3>
+            <p>Access luxury waterfront apartments, villas, and residential towers across top Dubai locations.</p>
+          </div>
+
+          <!-- 2. Tax-Free Rental Yields -->
+          <div class="vp-card-pro">
+            <div class="vp-card-top">
+              <div class="vp-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <span class="vp-card-num">02</span>
+            </div>
+            <h3>Tax-Free Rental Yields</h3>
+            <p>Secure 8%&ndash;10% rental returns paid in stable USD/AED currency.</p>
+          </div>
+
+          <!-- 3. Developer Payment Plans -->
+          <div class="vp-card-pro">
+            <div class="vp-card-top">
+              <div class="vp-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+              </div>
+              <span class="vp-card-num">03</span>
+            </div>
+            <h3>Developer Payment Plans</h3>
+            <p>Evaluate flexible purchase structures, including 1% monthly payment options.</p>
+          </div>
+
+          <!-- 4. 10-Year UAE Golden Visa -->
+          <div class="vp-card-pro">
+            <div class="vp-card-top">
+              <div class="vp-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                  <line x1="9" y1="9" x2="15" y2="9"></line>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="11" y2="17"></line>
+                </svg>
+              </div>
+              <span class="vp-card-num">04</span>
+            </div>
+            <h3>10-Year UAE Golden Visa</h3>
+            <p>Learn how property ownership secures long-term residency for your family.</p>
+          </div>
+
+          <!-- 5. 1-on-1 Developer Access -->
+          <div class="vp-card-pro">
+            <div class="vp-card-top">
+              <div class="vp-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="vp-card-num">05</span>
+            </div>
+            <h3>1-on-1 Developer Access</h3>
+            <p>Meet directly with senior portfolio advisors to review tailored opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Dubai Portfolio Showcase -->
+    <section class="showcase-section" id="developments">
+      <div class="vp-container">
+        <div class="sec-head">
+          <div class="sec-kicker">Premier Dubai Residences</div>
+          <h2>Featured Inventory at the Showcase</h2>
+          <p>Hand-picked opportunities releasing special allocations for attendees at the Lagos expo.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Property 1 -->
+          <article class="showcase-item">
+            <div class="showcase-img">
+              <img src="assets/dubai-facade.jpg" alt="Iconic Luxury Dubai Tower">
+              <span class="showcase-tag">Waterfront Tower</span>
+            </div>
+            <div class="showcase-body">
+              <h3>Skyline Residences</h3>
+              <p class="showcase-loc">Downtown &amp; Dubai Water Canal</p>
+              <div class="showcase-metrics">
+                <div>
+                  <div class="metric-val">8.8%</div>
+                  <div class="metric-lbl">Expected Yield</div>
+                </div>
+                <div>
+                  <div class="metric-val">1%</div>
+                  <div class="metric-lbl">Monthly Plan</div>
+                </div>
+                <div>
+                  <div class="metric-val">From $350K</div>
+                  <div class="metric-lbl">Starting Price</div>
+                </div>
+              </div>
+              <a class="showcase-btn" href="#consultation">Request Floor Plans</a>
+            </div>
+          </article>
+
+          <!-- Property 2 -->
+          <article class="showcase-item">
+            <div class="showcase-img">
+              <img src="assets/dubai-villa.jpg" alt="Luxury Lagoon Villa">
+              <span class="showcase-tag">Lagoon &amp; Golf Villa</span>
+            </div>
+            <div class="showcase-body">
+              <h3>The Oasis Mansions</h3>
+              <p class="showcase-loc">Dubai Hills &amp; Private Lagoons</p>
+              <div class="showcase-metrics">
+                <div>
+                  <div class="metric-val">10-Year</div>
+                  <div class="metric-lbl">Golden Visa</div>
+                </div>
+                <div>
+                  <div class="metric-val">5 &amp; 6 Bed</div>
+                  <div class="metric-lbl">Layouts</div>
+                </div>
+                <div>
+                  <div class="metric-val">From $1.4M</div>
+                  <div class="metric-lbl">Starting Price</div>
+                </div>
+              </div>
+              <a class="showcase-btn" href="#consultation">Request Brochure</a>
+            </div>
+          </article>
+
+          <!-- Property 3 -->
+          <article class="showcase-item">
+            <div class="showcase-img">
+              <img src="assets/dubai-aerial.jpg" alt="Palm Jumeirah & Coastal Dubai View">
+              <span class="showcase-tag">Beachfront Enclave</span>
+            </div>
+            <div class="showcase-body">
+              <h3>Palm Bay Terraces</h3>
+              <p class="showcase-loc">Palm Jumeirah Shoreline</p>
+              <div class="showcase-metrics">
+                <div>
+                  <div class="metric-val">9.4%</div>
+                  <div class="metric-lbl">Holiday Rental</div>
+                </div>
+                <div>
+                  <div class="metric-val">Private</div>
+                  <div class="metric-lbl">Beach Access</div>
+                </div>
+                <div>
+                  <div class="metric-val">From $780K</div>
+                  <div class="metric-lbl">Starting Price</div>
+                </div>
+              </div>
+              <a class="showcase-btn" href="#consultation">Reserve Allocation</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="showcase-swipe-hint">
+          <span>Swipe or drag horizontally</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+
+        <!-- 10-Year UAE Golden Visa Highlight -->
+        <div class="visa-banner" id="golden-visa" style="margin: 64px auto 0;">
+          <div class="vb-content">
+            <div class="sec-kicker" style="margin-bottom: 8px; color: var(--gold-light);">Residency Privileges</div>
+            <h3>10-Year UAE Golden Visa Eligibility</h3>
+            <p>Invest AED 2,000,000 (~$545,000) or more in qualifying property to secure immediate 10-year renewable
+              residency for yourself, your spouse, children of any age, and domestic staff.</p>
+            <div class="vb-features">
+              <div class="vbf-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>100% Tax-Free Personal &amp; Rental Income</span>
+              </div>
+              <div class="vbf-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Open UAE &amp; International USD Bank Accounts</span>
+              </div>
+              <div class="vbf-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>No Minimum Stay Requirement to Retain Visa</span>
+              </div>
+              <div class="vbf-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full Estate Planning &amp; Inheritance Rights</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vb-action-box">
+            <h4>Meet the Visa Specialists</h4>
+            <p>Book a private consultation slot in Lagos to review Golden Visa compliance and paperwork on the spot.</p>
+            <a class="btn-pill" style="padding: 12px 28px;" href="#consultation">BOOK PRIVATE SLOT</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="foot-container">
+      <div class="foot-brand">
+        <img src="assets/inchbrick-logo.png" alt="Inch & Brick Realty" style="height: 36px; margin-bottom: 12px;">
+        <strong style="color: var(--gold); letter-spacing: 0.16em; font-size: 0.8rem; text-transform: uppercase;">Dubai
+          Property Expo 2026 — Lagos Showcase</strong>
+        <p>Direct bridge between West Africa's most discerning investors and Dubai's premier waterfront, luxury, and
+          high-yield real estate projects.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Event Details</h4>
+        <ul>
+          <li><strong>Event:</strong> Dubai Property Showcase — Lagos</li>
+          <li><strong>Dates:</strong> 5–6 December 2026</li>
+          <li><strong>Hours:</strong> 10:00 AM – 7:00 PM</li>
+          <li><strong>Venue:</strong> [Venue Name, Lagos]</li>
+          <li><strong>Admission:</strong> By Confirmed Registration Only</li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contact &amp; Host</h4>
+        <ul>
+          <li><strong>Host:</strong> Inch &amp; Brick Realty</li>
+          <li><strong>Dubai Office:</strong> Business Bay, Dubai, UAE</li>
+          <li><strong>WhatsApp / Desk:</strong> +971 4 XXX XXXX / +234 80X XXX XXXX</li>
+          <li><strong>Email:</strong> events@inchbrick.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>© 2026 Inch &amp; Brick Realty. All rights reserved. Authorized Real Estate Advisory.</div>
+      <div>Disclaimer: Representations, yields, and prices are subject to developer terms and official contract
+        availability.</div>
+    </div>
+  </footer>
+
+  <!-- Script for Smooth Interaction & Form Handling -->
+  <script>
+    // Navigation solid background on scroll
+    const nav = document.getElementById("navbar");
+    const onScroll = () => nav.classList.toggle("solid", window.scrollY > 30);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    // Consultation Form Validation & Submission
+    const form = document.getElementById("consultation-form");
+    const thanks = document.getElementById("thanks-view");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        const name = form.name.value.trim();
+        const nationality = form.nationality ? form.nationality.value : "";
+        const mobile = form.mobile.value.trim();
+        const email = form.email.value.trim();
+
+        // Reset errors
+        document.getElementById("err-name").style.display = "none";
+        document.getElementById("err-mobile").style.display = "none";
+        document.getElementById("err-email").style.display = "none";
+
+        if (name.length < 2) {
+          document.getElementById("err-name").style.display = "block";
+          valid = false;
+        }
+
+        if (mobile.length < 7) {
+          document.getElementById("err-mobile").style.display = "block";
+          valid = false;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          document.getElementById("err-email").style.display = "block";
+          valid = false;
+        }
+
+        if (valid) {
+          const firstName = name.split(" ")[0];
+          document.getElementById("thanks-msg").textContent =
+            `Thank you, ${firstName}. Your consultation request for the Lagos Dubai Property Showcase (5–6 December 2026) has been confirmed. Our executive advisor will contact you on ${form.countryCode.value} ${mobile} to confirm your appointment details.`;
+          form.style.display = "none";
+          thanks.hidden = false;
+        }
+      });
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // Mouse drag-to-scroll for horizontal showcase columns
+    const showcaseSlider = document.querySelector(".showcase-grid");
+    if (showcaseSlider) {
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      let hasDragged = false;
+
+      showcaseSlider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        hasDragged = false;
+        showcaseSlider.classList.add("is-dragging");
+        startX = e.pageX - showcaseSlider.offsetLeft;
+        scrollLeft = showcaseSlider.scrollLeft;
+      });
+
+      showcaseSlider.addEventListener("mouseleave", () => {
+        isDown = false;
+        showcaseSlider.classList.remove("is-dragging");
+      });
+
+      showcaseSlider.addEventListener("mouseup", () => {
+        isDown = false;
+        showcaseSlider.classList.remove("is-dragging");
+      });
+
+      showcaseSlider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - showcaseSlider.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        if (Math.abs(walk) > 6) {
+          hasDragged = true;
+        }
+        showcaseSlider.scrollLeft = scrollLeft - walk;
+      });
+
+      showcaseSlider.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", (e) => {
+          if (hasDragged) {
+            e.preventDefault();
+          }
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>
