@@ -514,6 +514,70 @@
       gap: 6px;
     }
 
+    /* --- Consultation Form Modal --- */
+    .consultation-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .consultation-modal.is-open {
+      display: flex;
+    }
+
+    .consultation-modal__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 12, 19, 0.82);
+      backdrop-filter: blur(8px);
+    }
+
+    .consultation-modal__dialog {
+      position: relative;
+      z-index: 1;
+      width: min(480px, 100%);
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+    }
+
+    .consultation-modal__dialog .form-card {
+      width: 100%;
+      margin: 0;
+    }
+
+    .consultation-modal__close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(223, 193, 123, 0.4);
+      background: rgba(12, 16, 23, 0.7);
+      color: var(--gold-light);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .consultation-modal__close:hover {
+      background: rgba(223, 193, 123, 0.18);
+      border-color: var(--gold);
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
     /* --- Thanks View --- */
     .thanks-card {
       text-align: center;
@@ -1494,10 +1558,7 @@
 
     </a>
     <nav class="nav-links" aria-label="Main Navigation">
-      <a href="#event-details">Event Details</a>
-      <a href="#explore">What You Can Explore</a>
-      <a href="#developments">Developments</a>
-      <a href="#golden-visa">Golden Visa</a>
+      
       <a class="btn-pill" href="#consultation">Reserve Consultation</a>
     </nav>
   </header>
@@ -1517,7 +1578,7 @@
           </div>
           <h1>
             Dubai Property Expo 2026
-            <span class="gold">&mdash; Discover Your Next Address</span>
+            <span class="gold">Discover Your Next Address</span>
           </h1>
           <p class="hero-sub">
             Bringing Dubai's Premier Real Estate Market Directly to Lagos on 5th &amp; 6th December.
@@ -2009,6 +2070,20 @@
     </div>
   </footer>
 
+  <!-- Consultation Form Modal -->
+  <div class="consultation-modal" id="consultation-modal" aria-hidden="true">
+    <div class="consultation-modal__backdrop" data-close-modal="true"></div>
+    <div class="consultation-modal__dialog" role="dialog" aria-modal="true" aria-label="Reserve Your Consultation">
+      <button type="button" class="consultation-modal__close" id="consultation-modal-close" aria-label="Close form">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="consultation-modal-content"></div>
+    </div>
+  </div>
+
   <!-- Script for Smooth Interaction & Form Handling -->
   <script>
     // Navigation solid background on scroll
@@ -2061,9 +2136,90 @@
       });
     }
 
+    // Consultation modal: open the banner form when any CTA is clicked
+    const consultationModal = document.getElementById("consultation-modal");
+    const consultationModalContent = document.getElementById("consultation-modal-content");
+    const consultationModalClose = document.getElementById("consultation-modal-close");
+    const consultationFormCard = document.getElementById("consultation");
+    const heroFormSlot = consultationFormCard ? consultationFormCard.parentElement : null;
+    let consultationOpener = null;
+
+    function resetConsultationFormView() {
+      if (!form || !thanks) return;
+      form.style.display = "";
+      thanks.hidden = true;
+      ["err-name", "err-mobile", "err-email"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = "none";
+      });
+    }
+
+    function openConsultationModal(opener) {
+      if (!consultationModal || !consultationModalContent || !consultationFormCard) return;
+      consultationOpener = opener || document.activeElement;
+      resetConsultationFormView();
+      if (consultationFormCard.parentElement !== consultationModalContent) {
+        consultationModalContent.appendChild(consultationFormCard);
+      }
+      consultationModal.classList.add("is-open");
+      consultationModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      if (consultationModalClose) consultationModalClose.focus();
+    }
+
+    function closeConsultationModal() {
+      if (!consultationModal || !consultationFormCard) return;
+      consultationModal.classList.remove("is-open");
+      consultationModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      if (heroFormSlot && consultationFormCard.parentElement !== heroFormSlot) {
+        heroFormSlot.appendChild(consultationFormCard);
+      }
+      if (consultationOpener && typeof consultationOpener.focus === "function") {
+        consultationOpener.focus();
+      }
+      consultationOpener = null;
+    }
+
+    if (consultationModal && consultationFormCard) {
+      document.querySelectorAll('a[href="#consultation"]').forEach(cta => {
+        cta.addEventListener("click", function (e) {
+          e.preventDefault();
+          openConsultationModal(this);
+        });
+      });
+
+      consultationModal.addEventListener("click", function (e) {
+        if (e.target.closest("[data-close-modal]")) {
+          closeConsultationModal();
+        }
+      });
+
+      if (consultationModalClose) {
+        consultationModalClose.addEventListener("click", closeConsultationModal);
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && consultationModal.classList.contains("is-open")) {
+          closeConsultationModal();
+        }
+      });
+
+      if (window.location.hash === "#consultation") {
+        openConsultationModal();
+      }
+
+      window.addEventListener("hashchange", function () {
+        if (window.location.hash === "#consultation") {
+          openConsultationModal();
+        }
+      });
+    }
+
     // Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function (e) {
+        if (this.getAttribute("href") === "#consultation") return;
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
           e.preventDefault();
