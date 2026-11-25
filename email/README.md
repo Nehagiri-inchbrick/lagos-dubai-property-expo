@@ -19,34 +19,31 @@ A responsive, high-converting HTML email template specifically designed for **Em
 
 ## 📐 Template Architecture & Visual Flow
 
-1. **Top Brand Header**
-   - Inch & Brick Realty official logo + metallic gold `VIP PASS · 2026` badge.
+1. **Master Hero Banner (Matches Artwork Graphic)**
+   - High-definition master banner graphic (`expo-banner.jpg`):
+     - **Host Branding:** Inch & Brick Realty + Exclusive Lagos Showcase + `👑 VIP PASS - 2026`
+     - **Header Pill:** `✦ EXCLUSIVE EVENT DETAILS - LAGOS SHOWCASE ✦`
+     - **Headline:** *"Dubai Property Expo 2026"*
+     - **Subtitle:** *"Discover Your Next Address — Bringing Dubai's Premier Property Market to Lagos"*
+     - **Event Highlights:** 📅 5th & 6th Dec | 📍 Venue Name, Lagos | 🕒 VIP Slots 10:00 AM – 6:00 PM
+     - **Primary Action Button:** `REGISTER FOR THE PROPERTY SHOWCASE →`
+     - **Trust Strip:** 🛡️ 0% Agency Fee | 🤝 Direct Developer Allocations | ⭐ 1-on-1 VIP Advisory
+     - **Background:** Luxury terrace overlooking the Dubai skyline & Burj Khalifa at twilight.
 
-2. **Event Details Highlight Banner (Top of Image)**
-   - Highlighted warm champagne luxury banner placed right above the hero image:
-     - 📅 **Date:** 5th & 6th December 2026 (Saturday & Sunday)
-     - 📍 **Venue:** [Venue Name, Lagos] &bull; Victoria Island, Lagos
-     - ⏰ **Time:** VIP Slots (10:00 AM – 6:00 PM)
-
-3. **Hero Visual & Value Proposition**
-   - High-resolution hero image header (`assets/hero-banner.jpg`).
-   - Headline: *"Dubai Property Expo 2026 – Discover Your Next Address"*.
-   - Subheadline: *"Bringing Dubai's Premier Property Market to Lagos"*.
-   - Primary Action CTA: `REGISTER FOR THE PROPERTY SHOWCASE →`.
-
-4. **What You Can Explore**
+2. **What You Can Explore**
    - Clean, direct list with subheadings removed, matching the exact points from the blueprint:
      1. **Premium residential developments across prime Dubai corridors**
      2. **Hard currency (USD/AED) yield stability & tax-free income**
      3. **Developer payment plans & 1% monthly purchase options**
      4. **10-Year UAE Golden Visa eligibility for family residency**
 
-5. **VIP Registration Form / Express RSVP**
-   - Interactive 1-click preference selectors:
-     - **Select Date:** `[ Dec 5 (Saturday) ]` | `[ Dec 6 (Sunday) ]`
-     - **Preferred Time:** `[ ☀ Morning (10 AM - 1 PM) ]` | `[ 🌙 Afternoon (2 PM - 6 PM) ]`
-     - **Budget Bracket:** `[ $100,000 - $180,000 ]` | `[ ≥ $180,000+ (Golden Visa) ]`
-     - **Confirmation Button:** `CONFIRM MY EXPO RESERVATION →`
+3. **VIP Registration & Date Selection**
+   - Streamlined single attendance date selector (clean form radio styling, non-button):
+     - **Select Attendance Date:** `[ 📅 Saturday, 5th Dec ]` &bull; `[ 📅 Sunday, 6th Dec ]`
+     - **Confirmation Button:** `CONFIRM MY EXPO RESERVATION →` (Single, clear CTA)
+
+4. **Trust Bar & Clean Light Champagne Footer**
+   - Attendee privileges strip, verified host contact information, and compliance links (Unsubscribe, Update Preferences, Privacy Policy).
 
 ---
 
